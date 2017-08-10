@@ -1,6 +1,6 @@
 package com.kamleshgokal.springreact.service;
 
-import com.kamleshgokal.springreact.doman.NotificationData;
+import com.kamleshgokal.springreact.domain.NotificationData;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;

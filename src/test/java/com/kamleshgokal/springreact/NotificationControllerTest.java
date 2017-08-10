@@ -9,8 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import java.util.stream.IntStream;
 
 public class NotificationControllerTest {
 
@@ -68,5 +67,11 @@ public class NotificationControllerTest {
 
         System.out.println(result.toString());
 
+    }
+
+
+    @Test
+    public void test() {
+        IntStream.range(1,10).forEach((i) -> System.out.println("i=" + i));
     }
 }
