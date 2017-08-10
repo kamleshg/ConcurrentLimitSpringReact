@@ -23,7 +23,7 @@ public class NotificationController {
                 .forEach(j -> {
                     NotificationData data = new NotificationData();
                     data.setId(j);
-                    eventBus.notify("notificationConsumer", Event.wrap(data));
+                    eventBus.notify("consumer1", Event.wrap(data));
                 });
 
         System.out.println("Notification task submitted successfully");

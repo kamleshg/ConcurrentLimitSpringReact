@@ -1,7 +1,7 @@
 package com.kamleshgokal.springreact.consumer;
 
 import com.kamleshgokal.springreact.service.NotificationService;
-import com.kamleshgokal.springreact.doman.NotificationData;
+import com.kamleshgokal.springreact.domain.NotificationData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

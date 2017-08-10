@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import reactor.Environment;
 import reactor.bus.EventBus;
-import reactor.core.config.DispatcherType;
 
 @Configuration
 public class Config {
@@ -17,8 +16,8 @@ public class Config {
     @Bean
     EventBus createEventBus(Environment env) {
         EventBus evBus;
-//        evBus = EventBus.create(env, Environment.THREAD_POOL);
-        evBus = EventBus.create(env, Environment.newDispatcher(20, 10, DispatcherType.THREAD_POOL_EXECUTOR));
+        evBus = EventBus.create(env, Environment.THREAD_POOL);
+//        evBus = EventBus.create(env, Environment.newDispatcher(20, 10, DispatcherType.THREAD_POOL_EXECUTOR));
         return evBus;
     }
     

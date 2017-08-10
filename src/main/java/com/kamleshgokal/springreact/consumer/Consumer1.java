@@ -22,11 +22,10 @@ public class Consumer1 implements Consumer<Event<NotificationData>> {
         NotificationData notificationData = notificationDataEvent.getData();
         try {
             int i = (int) notificationData.getId();
-            System.out.println(String.join("", Collections.nCopies(i, buffer)) + "<" + i);
-            long start = System.currentTimeMillis();
+            System.out.println(String.join("", Collections.nCopies(i, buffer)) + "<1-" + i);
             Thread.sleep(5000);
-            long duration = System.currentTimeMillis() - start;
-            System.out.println(String.join("", Collections.nCopies(i, buffer)) + i + " took " + duration);
+            eventBus.notify("consumer2", notificationDataEvent);
+            System.out.println(String.join("", Collections.nCopies(i, buffer)) + "1-" + i + ">");
 
         } catch (Exception e) {
             System.out.println("EXCEPTION!");
